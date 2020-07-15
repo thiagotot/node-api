@@ -1,4 +1,5 @@
-Meu Primeiro Repositório 
+Curso GoStack RocketSeat
 ======================== 
 
-O Git/GitHub são legais!
+Estes fontes estão relacionados à API NODE na trilha GoStack da RocketSeat.
+Projeto de aprendizado
