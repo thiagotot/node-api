@@ -16,7 +16,7 @@ phases:
       - echo Build started on `date`
       - echo Compiling the Node.js code
 
-      
+
 # Include only the files required for your application to run.
 artifacts:
   files:
@@ -24,6 +24,6 @@ artifacts:
     - package.json
     - src/**/*
     - node_modules/**/*
-    - imageDetail.json
+    - imagedefinitions.json
 
 version: 0.2
