@@ -9,6 +9,8 @@ phases:
       - npm install -g express
       - npm install --save express
       - npm install mongoose
+      - npm install require-dir
+      - npm install cors
   build:
     commands:
       - echo Build started on `date`
