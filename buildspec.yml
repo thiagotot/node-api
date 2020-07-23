@@ -2,4 +2,12 @@ phases:
   install:
     runtime-versions:
       nodejs: 12
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: base_dir
+  name: build-nodeapi
+  discard-paths: no
+
 version: 0.2
