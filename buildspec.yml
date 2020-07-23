@@ -3,11 +3,12 @@ phases:
     runtime-versions:
       nodejs: 12
 
+# Include only the files required for your application to run.
 artifacts:
   files:
-    - '**/*'
-  base-directory: base_dir
-  name: build-nodeapi
-  discard-paths: no
+    - server.js
+    - package.json
+    - src/**/*
+    - node_modules/**/*
 
 version: 0.2
