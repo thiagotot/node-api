@@ -2,7 +2,18 @@ phases:
   install:
     runtime-versions:
       nodejs: 12
-
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - npm start
 # Include only the files required for your application to run.
 artifacts:
   files:
@@ -10,5 +21,6 @@ artifacts:
     - package.json
     - src/**/*
     - node_modules/**/*
+    - imageDetail.json
 
 version: 0.2
