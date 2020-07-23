@@ -26,3 +26,5 @@ app.use('/api', require("./src/routes"));
 
 
 app.listen(9999);
+
+console.log(`Running API on port 9999`);
