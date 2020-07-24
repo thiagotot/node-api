@@ -17,7 +17,7 @@ phases:
       - echo Compiling the Node.js code
       - docker build -t nodeapi:latest .
       - docker tag nodeapi:latest 048591110000.dkr.ecr.us-east-2.amazonaws.com/nodeapi:latest
-
+      - $(aws ecr get-login --no-include-email --region us-east-2)
   post_build:
     commands:
       - echo build Docker image complete `date`
