@@ -15,6 +15,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
+      - service docker start
       - docker build -t nodeapi:latest .
       - docker tag nodeapi:latest 048591110000.dkr.ecr.us-east-2.amazonaws.com/nodeapi:latest
 
