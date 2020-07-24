@@ -26,5 +26,6 @@ artifacts:
     - server.js
     - package.json
     - src/**/*
+    - imageDetail.json
 
 version: 0.2
