@@ -4,7 +4,6 @@ RUN apt-get update && apt-get install git -y && apt-get install imagemagick -y;
 WORKDIR /nodeapi
 
 COPY package*.json ./
-COPY controller controller
 COPY server.js server.js
 
 RUN npm install
