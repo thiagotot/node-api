@@ -27,5 +27,7 @@ artifacts:
     - package.json
     - src/**/*
     - imageDetail.json
+    - start.sh
+    - imagedefinitions.json
 
 version: 0.2
