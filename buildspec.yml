@@ -5,13 +5,8 @@ phases:
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
-      - npm install
-      - npm install -g express
-      - npm install --save express
-      - npm install mongoose
-      - npm install require-dir
-      - npm install cors
-      
+      - $(aws ecr get-login --no-include-email --region us-east-2)
+
   build:
     commands:
       - echo Build started on `date`
