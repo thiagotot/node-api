@@ -26,7 +26,5 @@ artifacts:
     - server.js
     - package.json
     - src/**/*
-    - node_modules/**/*
-    - imagedefinitions.json
 
 version: 0.2
