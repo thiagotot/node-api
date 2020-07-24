@@ -15,11 +15,14 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
-      - echo build Docker image on `date`
-      - cd src
       - docker build -t nodeapi:latest .
       - docker tag nodeapi:latest 048591110000.dkr.ecr.us-east-2.amazonaws.com/nodeapi:latest
 
+  post_build:
+    commands:
+      - echo build Docker image complete `date`
+      - echo push latest Docker images to ECR...
+      - docker push 048591110000.dkr.ecr.us-east-2.amazonaws.com/nodeapi:latest
 
 # Include only the files required for your application to run.
 artifacts:
