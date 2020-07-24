@@ -1,17 +1,9 @@
 FROM node:12
-RUN apt-get update && apt-get install git -y && apt-get install imagemagick -y;
 
-WORKDIR /nodeapi
+COPY . .
 
-COPY package*.json ./
-COPY server.js server.js
-
-RUN npm install
-RUN chown -R node:node /nodeapi
-
-ENV NODE_ENV=production
-ENV ENV_ECS=true
-USER node
+# App runs on port 9999
 EXPOSE 9999
 
-ENTRYPOINT ["npm", "start"]
+# Start the app
+CMD [ "npm", "start"]
