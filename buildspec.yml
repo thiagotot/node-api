@@ -11,7 +11,7 @@ phases:
       - npm install mongoose
       - npm install require-dir
       - npm install cors
-      - $(aws ecr get-login --no-include-email --region us-east-2)
+      
   build:
     commands:
       - echo Build started on `date`
