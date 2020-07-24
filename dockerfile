@@ -1,9 +1,13 @@
 FROM node:12
 
-COPY . .
+RUN mkdir /opt/app
+COPY src /opt/app
+COPY server.js /opt/app
+COPY package.json /opt/app
+COPY start.sh /opt/app
 
-# App runs on port 9999
+RUN chmod 744 /opt/app/start.sh
+
 EXPOSE 9999
 
-# Start the app
-CMD [ "npm", "start"]
+CMD ["/opt/app/start.sh"] 
